@@ -115,6 +115,11 @@ ins {
 	text-indent: -9000px;	
 	background-image: url(images/view-details.png);
 	background-repeat: no-repeat;
+	transform: scale(1);
+	@include transition(all .2s ease);
+	&:hover {
+		transform: scale(1.05);
+	}
 }
 .view-details a {
 	width: 138px;

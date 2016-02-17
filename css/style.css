@@ -1531,7 +1531,15 @@ ins {
   margin: 0px auto;
   text-indent: -9000px;
   background-image: url(images/view-details.png);
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  transform: scale(1);
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+  .view-details:hover {
+    transform: scale(1.05); }
 
 .view-details a {
   width: 138px;
