@@ -1,0 +1,799 @@
+/* =Basic structure
+-------------------------------------------------------------- */
+
+
+
+/* Body, links, basics */
+html {
+	
+}
+body {
+ 	font-family: "Open Sans",sans-serif;
+}
+
+a {
+	outline: none;
+	color: #21759b;
+}
+a:hover {
+	color: #0f3647;
+}
+
+
+/* =Main content and comment content
+-------------------------------------------------------------- */
+
+
+#main {
+	width: 96%;
+	margin: 0px auto;
+	overflow: hidden;
+	border: 1px solid #d0d0d0;
+	border-radius: 0px 0px 30px 30px;
+	
+	padding: 0 0 30px 0;
+
+	@media screen and (min-width: $tabwidth) {
+		//width: 1050px;
+		margin: 10px auto;
+	}
+
+	@media screen and (min-width: $deskwidth) {
+		width: 1050px;
+		margin: -2px auto 10px auto;
+	}
+}
+.page-content {
+	overflow: hidden;
+	width: 96%;
+	margin-top: 10px;
+	padding: 2%;	
+
+	@media screen and (min-width: $tabwidth) {
+
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 1000px;
+		padding: 25px; 
+	}
+}
+
+
+/* Header 
+-------------------------------------------------------------- */
+#header {
+	width: 100%;
+	position: relative;
+	margin: 0px auto;
+	text-align: center;
+
+	@media screen and (min-width: $tabwidth) {
+		text-align: left;
+		height: 220px;
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 1050px;
+		height: 220px;
+		float:left;	
+		margin: 0;
+	}
+}
+
+header.site-header {
+	overflow: hidden;
+	width: 100%;
+	position: relative;
+	@media screen and (min-width: $deskwidth) {
+		height: 220px;
+	}
+}
+.logo , h1.logo {
+	width: 280px;
+	height: 84px;
+	z-index: 1;
+	position: relative;
+	margin: 20px auto;
+	background: {
+		image: url(images/logo.png);
+		repeat: no-repeat;
+		size: cover;	
+	}
+	@media screen and (min-width: $tabwidth) {
+		float: left;
+		margin: 0;
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 550px;
+		height: 165px;
+		position: absolute;
+		top: 0px;
+		left:0px;
+		margin: 0;
+	}
+	
+}
+.logo a, h1.logo a{
+	width: 280px;
+	height: 84px;
+	display: block;
+	text-indent: -9000px;
+
+	@media screen and (min-width: $deskwidth) {
+		width: 550px;
+		height: 165px;
+	}
+}
+#dude-tagline {
+	text-align: center;
+	margin: 20px auto;
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+	font-size: 22px;	
+	width: 100%;
+	line-height: 1;
+	z-index: 200;
+	color:#2C2C2A;
+	font-style: italic;
+	clear: both;
+	overflow: hidden;
+
+	@media screen and (min-width: $tabwidth) {
+		margin: 50px auto;
+	}
+
+	@media screen and (min-width: $deskwidth) {
+		width: 250px;
+		height: 171px;
+		position: absolute;
+		right:225px;
+		top: 20px;
+		text-align: right;
+		margin: 0;
+	}
+}
+#dude {
+	display: none;
+	z-index: 101;
+
+	@media screen and (min-width: $deskwidth) {
+		width: 177px;
+		height: 171px;
+		display: block;
+		position: absolute;
+		right: 105px;
+		bottom: 49px;	
+		background-image: url(images/dude.png); 
+	}
+}
+
+
+/* Footer 
+-------------------------------------------------------------- */
+#footer {
+	width: 100%;
+	margin: 10px auto;
+	overflow:hidden;
+	text-align: center;
+	color:$color-blue;
+	@media screen and (min-width: $tabwidth) {
+
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 1050px;
+	}
+}
+#footer a {
+	text-decoration: none;
+	color:$color-blue;
+}
+.site-info {
+	width: 90%;
+	margin: 0px auto;
+	padding: 5%;
+	text-align: center;	
+	@media screen and (min-width: $deskwidth) {
+		width: 950px;
+		padding: 10px;
+	}
+}
+.site-info p {
+	margin: 5px 0px;
+	font-size:14px;	
+}
+#footernav {
+	width: auto;
+	margin: 10px auto;
+	position: relative;
+	
+	z-index: 6;	
+	@media screen and (min-width: $deskwidth) {
+		top: 7px; 
+		right: 10px;
+	}
+}
+
+#footernav  ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+	z-index: 2;
+	position: relative;
+}
+#footernav  ul li {
+	display: inline-block;
+	position: relative;
+	margin: 0px 0px;
+	font-size: 14px;
+}
+#footernav  ul a {
+	text-decoration: none;
+	display: inline-block;
+	position: relative;
+	border-right: 1px solid $color-blue;
+	padding: 0px 5px;
+}
+#footernav  .lastone a {
+	border-right: 0px solid #09F;
+	
+}
+.footer-sprite-info {
+	width: auto;
+	margin:15px auto 10px auto;	
+	text-align: center;
+	overflow: hidden;
+	@media screen and (min-width: $deskwidth) {
+		width: 935px;
+		margin:15px auto 10px auto;
+	}
+}
+.footer-sprite {
+	width: auto;
+	height: 35px;
+	float: left;
+	margin: 0 10px 0 0;	
+	font-size: 14px;
+	padding: 10px 0 0 0;
+	@media screen and (min-width: $deskwidth) {
+
+	}
+}
+.footeremail, .footerphone, .footerhome {
+	background-image: url(images/icon-sprite2.png);
+	background-repeat: no-repeat;
+	width: 33px;
+	height: 33px;
+	float: left;
+	margin: -10px 5px 0 0;
+}
+.footeremail {background-position: -132px -33px;}
+.footerphone {background-position: -99px -33px;}
+.footerhome {background-position: -165px -33px;}
+.copyright {
+	width: auto;
+	margin: 10px auto;
+	font-size: 14px;
+}
+.underline {
+	text-decoration: underline;	
+}
+/* = Page Templates 
+-------------------------------------------------------------- */
+.page-left {
+	width: 90%;
+	padding: 5%;
+	clear: both;
+	
+	@media screen and (min-width: $tabwidth) {
+		float:left;
+		width: 60%;
+		clear: none;
+		padding: 2%;
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 700px;
+		margin: 0 0 0 20px;
+		padding: 0;
+	}
+}
+.page-left-product {
+	width: 100%;
+	
+	margin: 0 0 0 20px;
+	@media screen and (min-width: $tabwidth) {
+		float:left;
+		width: 60%;
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 735px;
+	}
+}
+.page-right {
+	width: 100%;
+	
+	@media screen and (min-width: $tabwidth) {
+		float:right;
+		width: 30%;
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 290px;
+	}
+}
+.page-right-product {
+	width: 100%;
+	float:right;
+	@media screen and (min-width: $tabwidth) {
+		width: 30%;
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 290px;
+	}
+}
+
+/* = Blog
+-------------------------------------------------------------- */
+.post-container {
+	width: 100%;
+	float:left;
+	margin-bottom: 30px;
+
+	@media screen and (min-width: $tabwidth) {
+		
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 900px;
+	}	
+}
+/* = Home Page
+-------------------------------------------------------------- */
+.homepage-youtube {
+	float: left;	
+	position: relative;
+	margin-top: 40px;
+    
+	@media screen and (min-width: $tabwidth) {
+		height: 200px;
+		width: 35%;
+	}
+	@media screen and (min-width: $midwidth) {
+		height: 300px;
+		width: 40%;
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 500px;
+		height: 340px;
+		padding-right: 20px;
+		margin: 0;
+	}
+}
+
+.homepage-promo {
+    width: 950px;
+    height: 152px;
+    margin-top: -10px;
+    padding-bottom: 25px;
+    @media screen and (min-width: $tabwidth) {
+		
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		
+		
+	}
+}
+
+.homepage-youtube iframe,
+.homepage-youtube embed,
+.homepage-youtube object {
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0px;
+   left:0px;
+}
+
+
+.free-graphic {
+	width: 119px;
+	height: 71px;
+	position: absolute;
+	z-index: 3;
+	top: -20px;
+	right: -7px;
+	
+
+	@media screen and (min-width: $tabwidth) {
+		right: auto;
+		left: -7px;
+		transform: rotate(-60deg);
+	}
+	@media screen and (min-width: $deskwidth) {
+		right: -7px;
+		left: auto;
+		transform: rotate(0deg);
+	}
+}
+#homepage-top-right {
+	width: 100%;
+	float:right;
+	position: relative;
+	z-index: 2;
+	margin-top: 40px;
+
+	@media screen and (min-width: $tabwidth) {
+		width: 65%;
+	}
+	@media screen and (min-width: $midwidth) {
+		width: 60%;
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 450px;
+		margin-top:0;
+		
+	}
+}
+
+#homepage-top-right h2 {
+	font-size: 24px;
+	color:#004e97;	
+	margin: 5px 0 10px 0;
+	font-family:Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+}
+
+#bluecallouts {
+	width: 100%;
+	margin: 0px auto 10px auto;
+	text-align: center;
+	overflow: hidden;
+	@media screen and (min-width: $tabwidth) {
+		
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 1037px;
+		height: 248px;
+	}
+}
+#bluecallout1 a, #bluecallout2 a, #bluecallout3 a {
+	background-color: rgba($color-blue, 1);
+	color:#fff;
+	line-height: 1.5;
+	text-decoration:none;
+	width: 90%;
+	padding: 5%;
+	@include transition(all ease .3s);
+
+	&:hover {
+		background-color: rgba($color-blue, .8);
+	}
+
+	@media screen and (min-width: $tabwidth) {
+		width: 27%;
+		padding: 3%;
+		height: 370px;
+	}
+	@media screen and (min-width: $midwidth) {
+		height: 280px;
+	}
+	@media screen and (min-width: $deskwidth) {
+		height: 188px;
+		padding: 30px;
+		background: {
+			image: url(images/blue-callouts.png);
+			repeat: no-repeat;
+			color: rgba($color-blue, 0);
+		}
+	}
+}
+#bluecallout1, #bluecallout2, #bluecallout3 {position: relative;line-height: 1}
+#bluecallout1 a {
+	float: left;
+	background-position: 0px 0px;
+	position: relative;
+	border-bottom: 1px solid #fff;
+	@media screen and (min-width: $tabwidth) {
+		border-right: 1px solid #fff;
+		border-bottom: 0px solid #fff;
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 287px;
+		border-right: 0px solid #fff;
+	}
+}
+#bluecallout2 a {
+	float: left;
+	background-position: -347px 0px;
+	position: relative;
+	border-bottom: 1px solid #fff;
+	@media screen and (min-width: $tabwidth) {
+		border-right: 1px solid #fff;
+		border-bottom: 0px solid #fff;
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 283px;
+		border-right: 0px solid #fff;
+	}
+}
+#bluecallout3 a {
+	float: left;
+	background-position: -690px 0px;
+	position: relative;
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 287px;
+	}
+}
+#bluecallout1 a:hover {
+	background-position: 0px -248px;
+}
+#bluecallout2 a:hover {
+	background-position: -347px -248px;
+}
+#bluecallout3 a:hover {
+	background-position: -690px -248px;
+}
+#disclaimer {
+	width:90%;
+	padding: 5%;
+	margin: 20px auto;
+	font-size: 14px;
+	line-height: 1.5;	
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 980px;
+		padding:0;
+	}
+}
+
+
+.modal {
+	padding: 20px !important;
+    border: 1px solid rgba(0, 0, 0, 1) !important;
+    color: #000 !important;
+    background-color: #fff !important;
+    width: 600px !important;
+}
+
+.modal .title {
+	font-size: 24px !important;
+	color: #004E97 !important;
+	font-weight: bold !important;
+	padding-top: 10px;
+	font-family: Constantia,"Lucida Bright","DejaVu" !important;
+	padding-bottom: 10px;
+}
+.get-report {
+	width: 225px;
+	height: 44px;
+	margin: 0px auto;
+	@media screen and (min-width: $tabwidth) {
+		
+		position:absolute;
+		bottom: 40px;
+		left: 0;
+		right: 0;	
+	}
+	@media screen and (min-width: $deskwidth) {
+		left: 60px;	
+	}
+}
+.learnmore-home {
+	width: 212px;
+	height: 28px;
+	margin: 0px auto;
+	@media screen and (min-width: $tabwidth) {
+	
+		position:absolute;
+		bottom: 20px;
+		left: 0;
+		right: 0;	
+	}
+	@media screen and (min-width: $deskwidth) {
+		left: 80px;	
+	}
+}
+
+/* = Sidebar
+-------------------------------------------------------------- */
+.sidebar-box {
+	
+	width: 84%;
+	background-color: #CFCFCF;
+	border-radius: 0px 20px 20px 20px;
+	padding: 5% 5% 5% 5%;
+	-moz-box-shadow: 5px 6px 5px 3px #999;
+	-webkit-box-shadow: 5px 6px 5px 3px  #666;
+	box-shadow: 5px 6px 5px 3px #666;
+	min-height: 225px;
+	margin: 0 auto 30px auto;
+	text-align: center;
+	line-height: 1.3;
+	font-size: 16px;
+	position: relative;
+
+	@media screen and (min-width: $tabwidth) {
+		float: left;
+		margin: 0;
+		padding: 5% 5% 25% 5%;
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 245px;
+		padding: 15px;
+		background: {
+			image: url(images/sidebar-box-gradient.png);
+			repeat: repeat-x;
+			position: top;
+		}
+	}
+
+}
+
+.sidebar-box a {
+	color: #000;
+	text-decoration: none;
+}
+
+
+
+.sidebar-box h2 {
+	font-size: 24px;
+	color:#004e97;	
+	margin: 5px 0 20px 0;
+	font-family:Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+}
+
+
+.z1 {z-index: 5;margin-top: -10px}
+.z2 {z-index: 4}
+.z3 {z-index: 3}
+.get-report-blue {
+
+	width: 150px;
+	height: 28px;
+	position:absolute;
+	bottom: 40px;
+	left:0;
+	right:0;
+	margin: 0px auto;
+
+	@media screen and (min-width: $deskwidth) {
+		left:35px;
+		width: 212px;
+		height: 28px;
+	}
+}
+.learnmore {
+	width: 150px;
+	height: 28px;
+	position:absolute;
+	bottom: 20px;
+	left:0;
+	right:0;
+	margin: 0px auto;
+
+	@media screen and (min-width: $deskwidth) {
+		left:35px;
+		width: 212px;
+		height: 28px;
+	}
+}
+
+.get-report-blue img, .learnmore  img {width: 100%; }
+/* = Testimonials 
+-------------------------------------------------------------- */
+.testimonial-container {
+	
+	width: 100%;
+	overflow: hidden;
+	margin: 30px auto 0px auto;
+	position: relative;
+	padding: 0 0 50px 0;
+	@media screen and (min-width: $tabwidth) {
+		
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 935px;
+		height: 300px;
+		padding: 0 10px 40px 0;	
+		overflow: visible;
+	}
+}
+.box-testimonial {
+	width: 90%;
+	background-color: #CFCFCF;
+	border-radius: 0px 20px 20px 20px;
+	padding: 15px;
+	-moz-box-shadow: 5px 6px 5px 3px #999;
+	-webkit-box-shadow: 5px 6px 5px 3px #666;
+	box-shadow: 5px 6px 5px 3px #666;
+	
+	@media screen and (min-width: $tabwidth) {
+		width: 25%;
+		float: left;
+	}
+	@media screen and (min-width: $midwidth) {
+		width: 28%;
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 270px;
+		min-height: 270px;
+		background: {
+			image: url(images/boxgradient.png);
+			position: top;
+			repeat: repeat-x;
+		}
+	}
+	
+}
+.right-margin {
+	margin: 20px auto;	
+	@media screen and (min-width: $tabwidth) {
+		margin: 0 2% 0 0;
+	}
+	@media screen and (min-width: $deskwidth) {
+		margin: 0 17px 0 0;
+	}
+}
+.box-test-title {
+	font-size: 18px;
+	font-family:Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+.box-test-contents {
+	clear:both;
+}
+.box-test-name {
+	margin-bottom: 20px;
+	font-size: 14px;
+	font-weight: bold;
+	padding-top: 5px;
+}
+
+.box-test-test {
+	font-size: 14px;
+	line-height: 1.3;
+}
+.test-pic {
+	width: 83px;
+	height: 102px;
+	position:relative;
+	float: left;
+	margin: 0px 10px 10px 0;
+}
+.test-pic img {
+	position:absolute;
+	top: 0px; 
+	left:0px;
+	width: 100%; 
+	height: auto;
+}	
+.read-more-testimonials {
+	width: 151px;
+	height: 139px;
+	position: absolute;
+	right: 0px;
+	bottom: -20px;	
+}
+.read-more-testimonials a {
+	width: 151px;
+	height: 139px;
+	display: block;
+	right: 0px;
+	bottom: 0px;
+	text-indent: -9000px;	
+	background-image: url(images/read-more-testimonials.png);
+}
+/* = Testimonial Page
+-------------------------------------------------------------- */
+#isotope-container {
+	width: 1000px;
+	margin: 0 auto;
+}
+.item {
+	width: 300px;
+	margin: 0 0 30px 0;
+}

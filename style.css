@@ -1,0 +1,24 @@
+/*
+Theme Name: Risk Advisor
+Theme URI: http://bellaworksweb.com
+Author: Austin Crane
+Author URI: http://bellaworksweb.com
+Description: Responsive site for Risk Advisor
+Version: 1.0.0
+
+
+
+This theme was mostly done in SASS. 
+
+If you want to amemnd, you need to compile 
+the sass in the /sass into the /css
+or add styles below the import.
+
+
+
+
+*-------------------------------------------------------------- */
+
+@import url('css/style.css');
+
+

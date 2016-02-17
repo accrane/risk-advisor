@@ -1,0 +1,105 @@
+#sociallinks-text {
+	width: auto;
+	display: inline-block;
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+	font-style: italic;
+    padding-bottom: 5px;
+	text-align: right;
+    font-size: 14px;
+	z-index: 102;
+	margin: 10px auto;
+	text-align: center;
+	line-height: 1.2;
+	
+	& a {
+		color: #fff;
+		background-color: rgba($color-blue, 1);
+		@include transition(all ease .3s);
+		border-radius: 3px;
+		display: block;
+		padding: 5px;
+		text-decoration: none;
+
+		&:hover {
+			background-color: rgba($color-blue, .8);
+		}
+	}
+
+	@media screen and (min-width: $tabwidth) {
+		right: 10px;
+		top: 7px;
+		position: absolute;
+		margin: 0;
+	}
+}
+
+
+#sociallinks {
+	width: 120px;
+	height: 33px;
+	margin: 10px auto;
+	z-index: 102; 
+
+	@media screen and (min-width: $tabwidth) {
+		position: absolute;
+		top: 55px; 
+		right: 10px;
+		margin: 0;
+	}	
+}
+
+
+
+#sociallinks  ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+	z-index: 2;
+	position: relative;
+}
+#sociallinks  ul li {
+	float: right;
+	position: relative;
+	margin: 0px 3px;
+}
+#sociallinks  ul a {
+	
+	text-decoration: none;
+	background-image: url(images/icon-sprite2.png);
+	background-repeat: no-repeat;
+	display: inline-block;
+	height: 33px;
+	/*background-size:28px 28px;*/
+	text-indent: -9000px;
+	position: relative;
+}
+#sociallinks  .linkedin a {
+	width:33px;
+	background-position: -0px -33px;
+	position: relative;
+	
+}
+#sociallinks  .linkedin a:hover {
+	background-position: -0px -33px;
+	
+}
+#sociallinks  .facebook a {
+	width:33px;
+	background-position: -33px -33px;
+	position: relative;
+	
+}
+#sociallinks .facebook a:hover {
+	background-position: -33px -33px;
+	
+}
+#sociallinks  .twitter a {
+	width:33px;
+	background-position: -66px -33px;
+	position: relative;
+	
+}
+#sociallinks  .twitter a:hover {
+	background-position: -66px -33px;
+	
+}

@@ -1,0 +1,208 @@
+/* Navigation Menu */
+#main-navigation ul.nav-menu,
+	#main-navigation div.nav-menu > ul {
+		display: inline-block !important;
+		text-align: center;
+		//width: 1035px;
+
+		@media screen and (min-width: $tabwidth) {
+
+		}
+		
+	}
+#main-navigation {
+	width: 100%;	
+	z-index: 100;
+	clear: both;
+	& ul {
+		margin: 0;
+		text-indent: 0;
+	}
+	& li {
+		width: 100%;
+		float: left;
+		margin:0px !important;
+		display: inline-block;
+
+		@media screen and (min-width: $tabwidth) {
+			width: 20%;
+		}
+		@media screen and (min-width: $deskwidth) {
+			width: auto;
+		}
+
+		& ul {
+			display: none;
+			// margin: 0;
+			// padding: 0;
+			// position: absolute;
+			// top: 100%;
+			// z-index: 1;
+			& ul {
+				top: 0;
+				left: 100%;
+			}
+		}
+
+		@media screen and (min-width: $tabwidth) {
+			//width: 100%;
+		}
+		@media screen and (min-width: $deskwidth) {
+			width: auto;
+			height: 50px;
+		}
+
+	}
+
+	& a {
+		
+
+		
+	}
+// .home li,
+// .products li,
+// .speak li,
+// .about li,
+// .contact li
+// {
+// 	width: 100%;
+// 	@media screen and (min-width: $deskwidth) {
+// 		width: auto;
+// 	}
+// }
+.home a,
+.products a,
+.speak a,
+.about a,
+.contact a
+{
+	width: 90%;
+	padding: 5%;
+	display: block;
+	text-decoration: none;
+	margin:0px !important;
+	background-color: $color-blue;
+	color: #fff;
+	text-align: center;
+	border-bottom: {
+		color: #fff;
+		style: solid;
+		width: 1px;
+	}
+	@include transition(all ease .3s);
+	&:hover {
+		background-color: rgba($color-blue, .7);
+	}
+	
+	@media screen and (min-width: $tabwidth) {
+		border-bottom-width: 0;
+		width: 99%;
+		height: 50px;
+		padding: 5% 0 0 0;
+		border-right: {
+			color: #fff;
+			style: solid;
+			width: 1px;
+		}
+	}
+
+	@media screen and (min-width: $deskwidth) {
+		padding: 0;
+		height: 50px;
+		text-indent: -9000px;
+		border-right-width: 0px;
+		background: {
+			image: url(images/navigation.png);
+			repeat: no-repeat;
+		}
+	}
+}
+	.home a {
+		@media screen and (min-width: $deskwidth) {
+			width: 186px;
+			background-position: 0px 0px;
+			&:hover, &.active {
+				background-position: 0px -50px;
+			}
+		}
+	}
+	.products a {
+		@media screen and (min-width: $deskwidth) {
+			width: 249px;
+			background-position: -186px 0px;
+			&:hover {
+				background-position: -186px -50px;
+			}
+		}
+	}
+	.speak a {
+		@media screen and (min-width: $deskwidth) {
+			width: 208px;
+			background-position: -435px 0px;
+			&:hover, &.active {
+				background-position: -435px -50px;
+			}
+		}
+	}
+	.about a {
+		@media screen and (min-width: $deskwidth) {
+			width: 166px;
+			background-position: -643px 0px;
+			&:hover, &.active {
+				background-position: -643px -50px;
+			}
+		}
+	}
+	.contact a {
+		@media screen and (min-width: $deskwidth) {
+			width: 225px;
+			background-position: -809px 0px;
+			&:hover, &.active {
+				background-position: -809px -50px;
+			}
+		}
+	}
+
+	@media screen and (min-width: $tabwidth) {
+	
+	}
+	@media screen and (min-width: $deskwidth) {
+		position: absolute;
+		bottom: 1px;
+		left:8px;
+	}
+		
+}
+	
+/* Pagination */
+.pagination {
+	margin-top: 10px;
+	margin-bottom: 25px;	
+}
+.pagination li a,
+.pagination li a:hover,
+.pagination li.active a,
+.pagination li.disabled {
+	color: #fff;
+	text-decoration:none;
+}
+
+.pagination li {
+	display: inline;
+}
+
+.pagination li a,
+.pagination li a:hover,
+.pagination li.active a,
+.pagination li.disabled {
+	background-color: #CCCCCC;
+	border-radius: 3px;
+	cursor: pointer;
+	padding: 12px;
+	padding: 0.75rem;
+}
+
+.pagination li a:hover,
+.pagination li.active a {
+	background-color: #77AC48;
+}
