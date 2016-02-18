@@ -375,7 +375,13 @@ input[type="checkbox"], input[type="radio"], input[type="file"], input[type="hid
 .comment-content img,
 .widget img {
   max-width: 100%;
-  /* Fluid images for posts, comments, and widgets */ }
+  /* Fluid images for posts, comments, and widgets */
+  width: 100%; }
+  @media screen and (min-width: 600px) {
+    .entry-content img,
+    .comment-content img,
+    .widget img {
+      width: auto; } }
 
 img[class*="align"],
 img[class*="wp-image-"],
@@ -820,7 +826,8 @@ header.site-header {
   color: #2C2C2A;
   font-style: italic;
   clear: both;
-  overflow: hidden; }
+  overflow: hidden;
+  padding: 10px; }
   @media screen and (min-width: 600px) {
     #dude-tagline {
       margin: 50px auto; } }
@@ -832,7 +839,8 @@ header.site-header {
       right: 225px;
       top: 20px;
       text-align: right;
-      margin: 0; } }
+      margin: 0;
+      padding: 0; } }
 
 #dude {
   display: none;
@@ -972,15 +980,17 @@ header.site-header {
       padding: 0; } }
 
 .page-left-product {
-  width: 100%;
-  margin: 0 0 0 20px; }
+  width: 90%;
+  padding: 5%; }
   @media screen and (min-width: 600px) {
     .page-left-product {
       float: left;
       width: 60%; } }
   @media screen and (min-width: 1160px) {
     .page-left-product {
-      width: 735px; } }
+      width: 735px;
+      margin: 0 0 0 20px;
+      padding: 0; } }
 
 .page-right {
   width: 100%; }
@@ -997,7 +1007,8 @@ header.site-header {
   float: right; }
   @media screen and (min-width: 600px) {
     .page-right-product {
-      width: 30%; } }
+      width: 30%;
+      margin-top: 20px; } }
   @media screen and (min-width: 1160px) {
     .page-right-product {
       width: 290px; } }
@@ -1072,6 +1083,9 @@ header.site-header {
   position: relative;
   z-index: 2;
   margin-top: 40px; }
+  #homepage-top-right iframe {
+    width: 100%;
+    min-height: 340px; }
   @media screen and (min-width: 600px) {
     #homepage-top-right {
       width: 65%; } }
@@ -1082,6 +1096,12 @@ header.site-header {
     #homepage-top-right {
       width: 450px;
       margin-top: 0; } }
+
+.regbottom {
+  width: 100%;
+  padding-top: 5px !important; }
+  .regbottom img {
+    width: 100%; }
 
 #homepage-top-right h2 {
   font-size: 24px;
@@ -1337,7 +1357,7 @@ header.site-header {
   box-shadow: 5px 6px 5px 3px #666; }
   @media screen and (min-width: 600px) {
     .box-testimonial {
-      width: 25%;
+      width: 26%;
       float: left; } }
   @media screen and (min-width: 830px) {
     .box-testimonial {
@@ -1353,6 +1373,9 @@ header.site-header {
 .right-margin {
   margin: 20px auto; }
   @media screen and (min-width: 600px) {
+    .right-margin {
+      margin: 0 2.7% 0 0; } }
+  @media screen and (min-width: 830px) {
     .right-margin {
       margin: 0 2% 0 0; } }
   @media screen and (min-width: 1160px) {
@@ -1426,16 +1449,21 @@ ul.products {
   overflow: hidden; }
 
 li.product {
-  width: 100%;
+  width: 90%;
+  padding: 5%;
   list-style: none;
   position: relative;
-  margin: 0 20px 50px 0 !important;
-  height: 450px; }
+  margin: 0 0 50px 0 !important;
+  height: 450px;
+  background-color: #eeeeee; }
   @media screen and (min-width: 600px) {
     li.product {
       width: 40%;
       float: left;
-      height: 450px; } }
+      height: 450px;
+      margin: 0 20px 50px 0 !important;
+      background-color: rgba(238, 238, 238, 0);
+      padding: 0; } }
   @media screen and (min-width: 830px) {
     li.product {
       width: 45%;
@@ -1475,11 +1503,14 @@ select.orderby {
 
 /*  Product image wrap created in functions file hook */
 .img-wrap {
-  width: 100%;
+  width: 90%;
   border: 1px solid #ccc;
   padding: 0px;
   margin: 0px auto 10px auto;
-  text-align: center; }
+  text-align: center;
+  background-color: #fff; }
+  .img-wrap img {
+    width: auto; }
   @media screen and (min-width: 830px) {
     .img-wrap {
       width: 200px;
@@ -1525,7 +1556,7 @@ ins {
   width: 138px;
   height: 44px;
   position: absolute;
-  bottom: 0px;
+  bottom: 10px;
   left: 0;
   right: 0;
   margin: 0px auto;
@@ -1540,6 +1571,9 @@ ins {
   transition: all 0.2s ease; }
   .view-details:hover {
     transform: scale(1.05); }
+  @media screen and (min-width: 600px) {
+    .view-details {
+      bottom: 0px; } }
 
 .view-details a {
   width: 138px;

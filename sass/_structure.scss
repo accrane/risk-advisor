@@ -135,6 +135,7 @@ header.site-header {
 	font-style: italic;
 	clear: both;
 	overflow: hidden;
+	padding: 10px;
 
 	@media screen and (min-width: $tabwidth) {
 		margin: 50px auto;
@@ -148,6 +149,7 @@ header.site-header {
 		top: 20px;
 		text-align: right;
 		margin: 0;
+		padding: 0;
 	}
 }
 #dude {
@@ -295,15 +297,17 @@ header.site-header {
 	}
 }
 .page-left-product {
-	width: 100%;
+	width: 90%;
+	padding: 5%;
 	
-	margin: 0 0 0 20px;
 	@media screen and (min-width: $tabwidth) {
 		float:left;
 		width: 60%;
 	}
 	@media screen and (min-width: $deskwidth) {
 		width: 735px;
+		margin: 0 0 0 20px;
+		padding: 0;
 	}
 }
 .page-right {
@@ -322,6 +326,7 @@ header.site-header {
 	float:right;
 	@media screen and (min-width: $tabwidth) {
 		width: 30%;
+		margin-top : 20px;
 	}
 	@media screen and (min-width: $deskwidth) {
 		width: 290px;
@@ -419,6 +424,11 @@ header.site-header {
 	z-index: 2;
 	margin-top: 40px;
 
+	& iframe {
+		width: 100%;
+		min-height: 340px;
+	}
+
 	@media screen and (min-width: $tabwidth) {
 		width: 65%;
 	}
@@ -431,7 +441,13 @@ header.site-header {
 		
 	}
 }
-
+.regbottom {
+	width: 100%;
+	padding-top: 5px !important;
+	& img {
+		width: 100%;
+	}
+}
 #homepage-top-right h2 {
 	font-size: 24px;
 	color:#004e97;	
@@ -711,7 +727,7 @@ header.site-header {
 	box-shadow: 5px 6px 5px 3px #666;
 	
 	@media screen and (min-width: $tabwidth) {
-		width: 25%;
+		width: 26%;
 		float: left;
 	}
 	@media screen and (min-width: $midwidth) {
@@ -731,6 +747,9 @@ header.site-header {
 .right-margin {
 	margin: 20px auto;	
 	@media screen and (min-width: $tabwidth) {
+		margin: 0 2.7% 0 0;
+	}
+	@media screen and (min-width: $midwidth) {
 		margin: 0 2% 0 0;
 	}
 	@media screen and (min-width: $deskwidth) {
