@@ -827,7 +827,7 @@ header.site-header {
   font-style: italic;
   clear: both;
   overflow: hidden;
-  padding: 10px; }
+  padding: 10px 0; }
   @media screen and (min-width: 600px) {
     #dude-tagline {
       margin: 50px auto; } }
@@ -1489,7 +1489,7 @@ li.product h3 {
   line-height: 1.2;
   text-align: center;
   margin: 0 auto 5px auto;
-  height: 65px; }
+  min-height: 65px; }
 
 li.product h3 a {
   text-decoration: none !important;
