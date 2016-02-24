@@ -8,30 +8,27 @@ ul.products {
 }
 li.product {
 	width: 90%;
-	padding: 5%;
+	padding: 5% 5% 80px 5%;
 	list-style: none;
 	position: relative;
 	margin: 0 0 50px 0 !important;
-	height: 450px;
+	height: auto;
+	overflow: hidden;
 	background-color: rgba(238,238,238,1);
 
 	@media screen and (min-width: $tabwidth) {
 		width: 40%;
 		float: left;
-		height: 450px;
 		margin: 0 20px 50px 0 !important;
 		background-color: rgba(238,238,238,0);
-		padding: 0;
+		padding: 0 0 80px 0;
 	}
 	@media screen and (min-width: $midwidth) {
 		width: 45%;
 		float: left;
-		padding-bottom: 60px;
 	}
 	@media screen and (min-width: $deskwidth) {
 		width: 220px;
-		padding-bottom: 0;
-		height: 450px;
 	}
 }
 li.product a {
@@ -146,9 +143,13 @@ ins {
 /* = Single Product
 -------------------------------------------------------------- */
 .images {
-	width: 400px; 
+	width: 100%;
 	float:left;	
 	position: relative;
+	@media screen and (min-width: $deskwidth) {
+		width: 400px;
+
+	}
 }
 .instock {position: relative;}
 .summary {

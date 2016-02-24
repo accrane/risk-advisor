@@ -27,6 +27,9 @@ $(document).ready(function () {
 						},
 				  itemSelector: '.item'
 			});
+
+
+			$('.product').matchHeight();
 			
 			
 			

@@ -299,10 +299,12 @@ header.site-header {
 .page-left-product {
 	width: 90%;
 	padding: 5%;
+	clear: both;
 	
 	@media screen and (min-width: $tabwidth) {
 		float:left;
 		width: 60%;
+		clear: none;
 	}
 	@media screen and (min-width: $deskwidth) {
 		width: 735px;

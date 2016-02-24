@@ -21,6 +21,13 @@
 			get_bloginfo('template_directory') . '/js/isotope.js',
 			array('jquery') );
 		wp_enqueue_script('isotope');
+
+		// Equal heights div...
+		wp_register_script(
+			'blocks',
+			get_bloginfo('template_directory') . '/js/blocks.js',
+			array('jquery') );
+		wp_enqueue_script('blocks');
 		
 		
 		

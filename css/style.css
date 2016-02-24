@@ -981,11 +981,13 @@ header.site-header {
 
 .page-left-product {
   width: 90%;
-  padding: 5%; }
+  padding: 5%;
+  clear: both; }
   @media screen and (min-width: 600px) {
     .page-left-product {
       float: left;
-      width: 60%; } }
+      width: 60%;
+      clear: none; } }
   @media screen and (min-width: 1160px) {
     .page-left-product {
       width: 735px;
@@ -1450,30 +1452,27 @@ ul.products {
 
 li.product {
   width: 90%;
-  padding: 5%;
+  padding: 5% 5% 80px 5%;
   list-style: none;
   position: relative;
   margin: 0 0 50px 0 !important;
-  height: 450px;
+  height: auto;
+  overflow: hidden;
   background-color: #eeeeee; }
   @media screen and (min-width: 600px) {
     li.product {
       width: 40%;
       float: left;
-      height: 450px;
       margin: 0 20px 50px 0 !important;
       background-color: rgba(238, 238, 238, 0);
-      padding: 0; } }
+      padding: 0 0 80px 0; } }
   @media screen and (min-width: 830px) {
     li.product {
       width: 45%;
-      float: left;
-      padding-bottom: 60px; } }
+      float: left; } }
   @media screen and (min-width: 1160px) {
     li.product {
-      width: 220px;
-      padding-bottom: 0;
-      height: 450px; } }
+      width: 220px; } }
 
 li.product a {
   text-decoration: none !important; }
@@ -1583,9 +1582,12 @@ ins {
 /* = Single Product
 -------------------------------------------------------------- */
 .images {
-  width: 400px;
+  width: 100%;
   float: left;
   position: relative; }
+  @media screen and (min-width: 1160px) {
+    .images {
+      width: 400px; } }
 
 .instock {
   position: relative; }
