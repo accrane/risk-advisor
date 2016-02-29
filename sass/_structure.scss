@@ -139,6 +139,8 @@ header.site-header {
 
 	@media screen and (min-width: $tabwidth) {
 		margin: 50px auto;
+		text-align: left;
+		padding: 10px 0 0 30px;
 	}
 
 	@media screen and (min-width: $deskwidth) {
@@ -153,17 +155,27 @@ header.site-header {
 	}
 }
 #dude {
-	display: none;
 	z-index: 101;
+	display: block;
+	width: 177px;
+	height: 171px;
+	position: relative;
+	background-image: url(images/dude.png); 
+	float: right;
 
-	@media screen and (min-width: $deskwidth) {
-		width: 177px;
-		height: 171px;
-		display: block;
+	@media screen and (min-width: $tabwidth) {
+		
+		float: none;
 		position: absolute;
 		right: 105px;
+		bottom: 3px;	
+		
+	}
+	
+
+	@media screen and (min-width: $deskwidth) {
+		right: 105px;
 		bottom: 49px;	
-		background-image: url(images/dude.png); 
 	}
 }
 

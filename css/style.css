@@ -830,7 +830,9 @@ header.site-header {
   padding: 10px 0; }
   @media screen and (min-width: 600px) {
     #dude-tagline {
-      margin: 50px auto; } }
+      margin: 50px auto;
+      text-align: left;
+      padding: 10px 0 0 30px; } }
   @media screen and (min-width: 1160px) {
     #dude-tagline {
       width: 250px;
@@ -843,17 +845,23 @@ header.site-header {
       padding: 0; } }
 
 #dude {
-  display: none;
-  z-index: 101; }
-  @media screen and (min-width: 1160px) {
+  z-index: 101;
+  display: block;
+  width: 177px;
+  height: 171px;
+  position: relative;
+  background-image: url(images/dude.png);
+  float: right; }
+  @media screen and (min-width: 600px) {
     #dude {
-      width: 177px;
-      height: 171px;
-      display: block;
+      float: none;
       position: absolute;
       right: 105px;
-      bottom: 49px;
-      background-image: url(images/dude.png); } }
+      bottom: 3px; } }
+  @media screen and (min-width: 1160px) {
+    #dude {
+      right: 105px;
+      bottom: 49px; } }
 
 /* Footer 
 -------------------------------------------------------------- */
